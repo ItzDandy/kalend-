@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="kalendar.css">
+  <script src="kalendar.js"></script>
+  <title>Roční kalendář</title>
+</head>
+<body>
+
+<label for="mesiceSelect">Vyberte měsíc: </label>
+<select id="mesiceSelect" onchange="zmenMesic()">
+  <option value="0">Leden</option>
+  <option value="1">Únor</option>
+  <option value="2">Březen</option>
+  <option value="3">Duben</option>
+  <option value="4">Květen</option>
+  <option value="5">Červen</option>
+  <option value="6">Červenec</option>
+  <option value="7">Srpen</option>
+  <option value="8">Září</option>
+  <option value="9">Říjen</option>
+  <option value="10">Listopad</option>
+  <option value="11">Prosinec</option>
+</select>
+
+<label for="rokySelect">Vyberte rok: </label>
+<select id="rokySelect" onchange="zmenRok()">
+</select>
+
+<div id="kalendar"></div>
+
+<div id="udalostForm" style="margin-top: 20px;">
+  <h2>Přidat událost</h2>
+  <div>
+    <label for="udalostInput">Událost:</label>
+    <input type="text" id="udalostInput" name="udalostInput" required>
+  </div>
+  <div>
+    <label for="datumInput">Datum:</label>
+    <input type="date" id="datumInput" name="datumInput" required>
+  </div>
+  <div>
+    <label for="casInput">Čas:</label>
+    <input type="time" id="casInput" name="casInput" required>
+  </div>
+  <button type="button" onclick="pridatUdalost()">Přidat událost</button>
+  <button type="button" onclick="vymazatFormular()">Vymazat formulář</button>
+</div>
+
+</body>
+</html>
